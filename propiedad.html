@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Propiedades - Página básica 4</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet" />
+
+    <link
+      href="assets/lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header">
+      <div class="container-fluid p-0 m-0">
+        <div
+          class="container-fluid d-flex align-items-center justify-content-between navbar-nav-top"
+        >
+          <a href="inicio.html" class="logo">
+            <h1>LOGO</h1>
+          </a>
+
+          <i
+            class="mobile-nav-toggle mobile-nav-show bi bi-list text-white"
+          ></i>
+          <i
+            class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x text-white"
+          ></i>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li>
+                <a href="#" class="active">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- .navbar -->
+        </div>
+
+        <div class="w-100">
+          <nav id="navbar" class="navbar w-100">
+            <ul class="navbar-nav-down">
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+              <li><a href="propiedad.html" class="active">Propiedades</a></li>
+              <li><a href="contacto.html">Contáctanos</a></li>
+              <li><a href="intranet.html">Intranet</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+      <div class="info info-height d-flex align-items-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+              <!-- info -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="hero-carousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <div
+          class="carousel-item active"
+          style="
+            background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg);
+          "
+        ></div>
+        <div
+          class="carousel-item"
+          style="
+            background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg);
+          "
+        ></div>
+        <a
+          class="carousel-control-prev"
+          href="#hero-carousel"
+          role="button"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bi bi-chevron-left"
+            aria-hidden="true"
+          ></span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#hero-carousel"
+          role="button"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon bi bi-chevron-right"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- ======= Filter search Section ======= -->
+    <div class="filter-search m-3">
+      <div class="container d-flex justify-content-center flex-column">
+        <div class="section-header">
+          <h2>Búsqueda avanzada</h2>
+        </div>
+        <form>
+          <div class="row g-2">
+            <div class="col-md-4">
+              <select class="form-select py-2">
+                <option selected>Tipo de Propiedad</option>
+                <option value="1">Tipo de Propiedad 1</option>
+                <option value="2">Tipo de Propiedad 2</option>
+                <option value="3">Tipo de Propiedad 3</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <select class="form-select py-2">
+                <option selected>Tipo de Operación</option>
+                <option value="1">Tipo de Operación 1</option>
+                <option value="2">Tipo de Operación 2</option>
+                <option value="3">Tipo de Operación 3</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <select class="form-select py-2">
+                <option selected>Región</option>
+                <option value="1">Región 1</option>
+                <option value="2">Región 2</option>
+                <option value="3">Región 3</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <select class="form-select py-2">
+                <option selected>Ciudad</option>
+                <option value="1">Ciudad 1</option>
+                <option value="2">Ciudad 2</option>
+                <option value="3">Ciudad 3</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <select class="form-select py-2">
+                <option selected>Habitaciones</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <select class="form-select py-2">
+                <option selected>Baños</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div
+              class="col-md-2 d-flex flex-col align-items-center justify-content-center"
+            >
+              <label class="text-black">Precio</label>
+            </div>
+            <div
+              class="col-md-2 d-flex flex-col align-items-center justify-content-center justify-content-lg-start"
+            >
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineRadio1">UF</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2">CLP</label>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div>
+                <input
+                  type="number"
+                  class="form-control py-2"
+                  placeholder="Desde"
+                />
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div>
+                <input
+                  type="number"
+                  class="form-control py-2"
+                  placeholder="Hasta"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <select class="form-select py-2">
+                <option selected>Estacionamientos</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="2">3</option>
+              </select>
+            </div>
+
+            <div class="col-md-12 d-flex justify-content-center mt-4">
+              <button type="submit" class="btn btn-rounded btn-circle">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Filter search End -->
+
+    <!-- ======= Utstanding Properties Section ======= -->
+    <div class="outstanding-properties">
+      <div class="container wow fadeInUp" data-wow-delay="0.1s">
+        <div class="section-header section-header__uppercase">
+          <h2>Propiedades</h2>
+        </div>
+        <div class="section-display-conf">
+          <div>
+            <span>De 1 a 12 Propiedades</span>
+          </div>
+          <div>
+            <div
+              class="d-flex align-items-center justify-content-end preview-layout"
+            >
+              <button type="button" class="btn btn-light border-0 btn-list">
+                <span>
+                  <i class="bi bi-list-ul"></i>
+                </span>
+              </button>
+
+              <button type="button" class="btn btn-light border-0 btn-grid">
+                <span>
+                  <i class="bi bi-grid-fill"></i>
+                </span>
+              </button>
+
+              <button type="button" class="btn btn-light border-0 btn-map">
+                <span>
+                  <i class="bi bi-pin-map"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center justify-content-end">
+            <div class="d-flex flex-row align-items-center">
+              <p class="text-nowrap pt-3 px-2">Ordenar por:</p>
+              <select class="form-select border">
+                <option selected>Relevancia</option>
+                <option value="1">Precio de mayor a menor</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= Properties Section ======= -->
+        <div class="properties">
+          <div class="container py-1 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row" id="container-propiedad">
+              <!-- <div class="col-property-item">
+                <div class="property-item">
+                  <div class="bg-success property-item-img">
+                    <a href="detalle_propiedad.html"
+                      ><img
+                        class="img-fluid"
+                        src="assets/img/properties/property-4.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="principal-info">
+                      <small>Casa / Arriendo</small>
+                      <a class="card-title" href="detalle_propiedad.html"
+                        >Casa amoblada excelente ubicación</a
+                      >
+                      <p>
+                        <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                      </p>
+                    </div>
+                    <div class="secundary-info">
+                      <small>REF: 232312</small>
+                      <div>
+                        <span>
+                          <i class="fa-sharp fa-solid fa-bed"></i> 3
+                        </span>
+                        <span>
+                          <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                        </span>
+                      </div>
+                    </div>
+                    <div class="more-info">
+                      <p>UF: 16.800 / CLP 56.500.000</p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- End Porperties section -->
+
+        <nav aria-label="..." class="bg-white rounded">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">
+                <i class="fa-sharp fa-solid fa-arrow-left"></i>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#"
+                >2 <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <i class="fa-sharp fa-solid fa-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Properties End -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="footer-content position-relative">
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-lg-4 d-flex align-items-center flex-column">
+          <div class="footer-logo">
+            <a href="inicio.html" style="color: #fff !important">LOGO</a>
+          </div>
+          <div class="footer-navigation">
+            <div class="footer-nav-links">
+              <ul>
+                <li>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-circle btn-sm"
+                  >
+                    <a href="#">
+                      <i class="bi bi-facebook"></i>
+                    </a>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-circle btn-sm"
+                  >
+                    <a href="#">
+                      <i class="bi bi-instagram"></i>
+                    </a>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-circle btn-sm"
+                  >
+                    <a href="#">
+                      <i class="bi bi-twitter"></i>
+                    </a>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-circle btn-sm"
+                  >
+                    <a href="#">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 align-items-center">
+          <div class="footer-nav-address">
+            <ul class="footer-nav-menu">
+              <li>
+                <h4 style="color: #fff; font-size: 20px">Menú</h4>
+              </li>
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+              <li><a href="propiedad.html">Propiedades</a></li>
+              <li><a href="contacto.html">Contáctanos</a></li>
+              <li><a href="intranet.html">Intranet</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-flex align-items-center flex-column">
+          <p class="text-center" style="color: #fff; font-size: 20px">
+            Contáctese con nosotros
+          </p>
+
+          <div class="footer-nav-address">
+            <ul>
+              <li style="color: #fff !important">
+                <i class="bi bi-geo-alt"></i>
+                <span
+                  >RentalProp Spa Apoquindo 6410 Of. 605, Las Condes</span
+                >
+              </li>
+              <li style="color: #fff !important">
+                <i class="bi bi-telephone"></i>
+                <span
+                  >RentalProp Spa Apoquindo 6410 Of. 605, Las Condes</span
+                >
+              </li>
+              <li style="color: #fff !important">
+                <i class="bi bi-envelope-open mr-3"></i>
+                <span
+                  >RentalProp Spa Apoquindo 6410 Of. 605, Las Condes</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="row w-100">
+  <div
+    class="d-flex flex-row align-items-center justify-content-center text-center pt-3 bg-white"
+  >
+    <p>&copy Todos los derechos reservados</p>
+  </div>
+</div>
+<!-- End Footer -->
+
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/owlCarousel.js"></script>
+    <script src="assets/js/viewProperties.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script type="module" src="assets/js/index.js"></script>
+		<script type="module" src="assets/js/utils/getValuesOfinputs.js"></script>
+  </body>
+</html>
