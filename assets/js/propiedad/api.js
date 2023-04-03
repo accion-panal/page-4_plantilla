@@ -15,11 +15,15 @@ const response2 = await ExchangeRateServices.getExchangeRateUF();
 const ufValue = response2?.UFs[0]?.Valor
 const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
 
+
+document.getElementById("total-prop").innerHTML = `<div>${response.meta.totalItems} Propiedades encontradas
+	</div>`
+
   document.getElementById('container-propiedad').innerHTML = data.map(data => 
       `<div class="col-property-item">
         <div class="property-item">
           <div class="bg-success property-item-img">
-            <a href="detalle_propiedad.html"
+            <a href="detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
               ><img
                 class="img-fluida"
                 src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "assets/img/Sin.png" }"
@@ -28,8 +32,8 @@ const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
           </div>
           <div class="card-body">
             <div class="principal-info">
-              <small>VENTA</small>
-              <a class="card-title" href="detalle_propiedad.html"
+              <small>${data.operation}</small>
+              <a class="card-title" href="detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
                 >${data.title}</a
               >
               <p>

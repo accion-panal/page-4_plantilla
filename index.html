@@ -172,56 +172,54 @@
         <form>
           <div class="row g-2">
             <div class="col-md-4">
-              <select class="form-select py-2">
-                <option selected>Tipo de Propiedad</option>
-                <option value="1">Tipo de Propiedad 1</option>
-                <option value="2">Tipo de Propiedad 2</option>
-                <option value="3">Tipo de Propiedad 3</option>
+              <select class="form-select py-2" id="typeOfProperty">
+                <option value="" selected>Tipo de Propiedad</option>
+                <option value="casa">Casa</option>
+								<option value="bodega">Bodega</option>
+								<option value="departamento">Departamento</option>
+								<option value="estacionamientos">Estacionamiento</option>
               </select>
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2">
-                <option selected>Tipo de Operación</option>
-                <option value="1">Tipo de Operación 1</option>
-                <option value="2">Tipo de Operación 2</option>
-                <option value="3">Tipo de Operación 3</option>
+              <select class="form-select py-2" id="operationType">
+                <option value="" selected>Tipo de Operación</option>
+                <option value="venta" >Venta</option>
+                <option value="arriendo" >Arriendo</option>
+                <option value="arriendo_temporal" >Arriendo Temporal</option>
               </select>
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2">
-                <option selected>Región</option>
-                <option value="1">Región 1</option>
-                <option value="2">Región 2</option>
-                <option value="3">Región 3</option>
+              <select class="form-select py-2"id="region">
+                <option value="0" selected>Región</option>
               </select>
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2">
-                <option selected>Ciudad</option>
-                <option value="1">Ciudad 1</option>
-                <option value="2">Ciudad 2</option>
-                <option value="3">Ciudad 3</option>
+              <select class="form-select py-2" id="commune">
+                <option value="" selected>Comuna</option>
+               
               </select>
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2">
-                <option selected>Habitaciones</option>
+              <select class="form-select py-2" id="bedrooms">
+                <option value="" selected>Habitaciones</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
+                <option value="4">4</option>
               </select>
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2">
-                <option selected>Baños</option>
+              <select class="form-select py-2" id="bathrooms">
+                <option value="" selected>Baños</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
-                <option value="2">3</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
               </select>
             </div>
 
@@ -261,6 +259,7 @@
                   type="number"
                   class="form-control py-2"
                   placeholder="Desde"
+                  id="min_price"
                 />
               </div>
             </div>
@@ -270,21 +269,24 @@
                   type="number"
                   class="form-control py-2"
                   placeholder="Hasta"
+                  id="max_price"
                 />
               </div>
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2">
-                <option selected>Estacionamientos</option>
+              <select class="form-select py-2" id="covered_parking_lots">
+                <option value="" selected>Estacionamientos</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
-                <option value="2">3</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+
               </select>
             </div>
 
             <div class="col-md-12 d-flex justify-content-center mt-4">
-              <button type="submit" class="btn btn-rounded btn-circle">
+              <button type="submit" class="btn btn-rounded btn-circle" id="buscar">
                 Buscar
               </button>
             </div>
@@ -636,6 +638,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script type="module" src="assets/js/prop_destacada.js"></script>
-		<script type="module" src="assets/js/utils/getValuesOfinputs.js"></script>
+
+    <script type="module" src="assets/js/utils/filterOnSubmit.js"></script>
+		<script type="module" src="assets/js/utils/filterOnSubmitIndex.js"></script>
+
+		<script type="module" src="assets/js/utils/getSelects.js"></script>
+
   </body>
 </html>

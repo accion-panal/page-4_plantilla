@@ -1,4 +1,4 @@
-import apiDetalleCall from "./Propiedades/apiDetalle.js";
+import apiDetalleCall from "./propiedad/apiDetalle.js";
 // const getId = window.location.search;
 // console.log(getId);
 const url = window.location.search; 
