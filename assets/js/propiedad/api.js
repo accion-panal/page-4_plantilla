@@ -1,9 +1,20 @@
 import { getProperties } from "../services/PropertiesServices.js"
 
+import	ExchangeRateServices from  "../services/ExchangeRateServices.js";
+
+import {parseToCLPCurrency, clpToUf} from "../utils/getExchangeRate.js";
+
 
 export default async function apiCall() {
-  let {data} = await getProperties();
-  console.log( document.getElementById('container-propiedad'));
+const response = await getProperties(0, 1, 1);
+const data = response.data;
+
+console.log(data)
+
+const response2 = await ExchangeRateServices.getExchangeRateUF();
+const ufValue = response2?.UFs[0]?.Valor
+const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
+
   document.getElementById('container-propiedad').innerHTML = data.map(data => 
       `<div class="col-property-item">
         <div class="property-item">
@@ -15,7 +26,6 @@ export default async function apiCall() {
                 alt=""
             /></a>
           </div>
-
           <div class="card-body">
             <div class="principal-info">
               <small>VENTA</small>
@@ -33,12 +43,12 @@ export default async function apiCall() {
                   <i class="fa-sharp fa-solid fa-bed"></i> ${data.bedroom != undefined && data.bedroom != "" && data.bedroom != null ? data.bedroom : "0"}
                 </span>
                 <span>
-                  <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathroom != undefined && data.bathroom != "" && data.bathroom != null ? data.bathroom : "0"}
+                  <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined  && data.bathrooms != "" && data.bathrooms != "null" && data.bathrooms != null ? data.bathrooms : "0"}
                 </span>
               </div>
             </div>
             <div class="more-info">
-              <p>${data.currency.name} / $${data.price}</p>
+              <p> UF ${clpToUf(data.price, ufValueAsNumber)} - ${parseToCLPCurrency(data?.price)}</p>
             </div>
           </div>
         </div>

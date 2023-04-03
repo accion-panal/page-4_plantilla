@@ -1,5 +1,5 @@
 const api = axios.create({
-    baseURL: 'http://190.114.255.247:5050/',
+    baseURL: 'https://aulen.partnersadvisers.info/',
   });
   
   export default api;

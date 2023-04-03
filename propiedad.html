@@ -15,7 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-
     <!-- Libraries Stylesheet -->
     <link href="assets/lib/animate/animate.min.css" rel="stylesheet" />
 
@@ -55,7 +54,7 @@
         <div
           class="container-fluid d-flex align-items-center justify-content-between navbar-nav-top"
         >
-          <a href="inicio.html" class="logo">
+          <a href="index.html" class="logo">
             <h1>LOGO</h1>
           </a>
 
@@ -95,7 +94,7 @@
         <div class="w-100">
           <nav id="navbar" class="navbar w-100">
             <ul class="navbar-nav-down">
-              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="index.html">Inicio</a></li>
               <li><a href="nosotros.html">¿Quiénes somos?</a></li>
               <li><a href="propiedad.html" class="active">Propiedades</a></li>
               <li><a href="contacto.html">Contáctanos</a></li>
@@ -305,7 +304,18 @@
             <span>De 1 a 12 Propiedades</span>
           </div>
           <div>
-            <div
+            <ul class="nav nav-pills " id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="btn btn-light border-0 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"> <i class="bi bi-grid-fill"></i></button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="btn btn-light border-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <i class="bi bi-list-ul"></i></button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="btn btn-light border-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" ><i class="bi bi-pin-map"></i></button>
+              </li>
+              </ul>
+            <!-- <div
               class="d-flex align-items-center justify-content-end preview-layout"
             >
               <button type="button" class="btn btn-light border-0 btn-list">
@@ -325,7 +335,7 @@
                   <i class="bi bi-pin-map"></i>
                 </span>
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -344,7 +354,9 @@
         <!-- ======= Properties Section ======= -->
         <div class="properties">
           <div class="container py-1 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row" id="container-propiedad">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row" id="container-propiedad">
               <!-- <div class="col-property-item">
                 <div class="property-item">
                   <div class="bg-success property-item-img">
@@ -384,6 +396,8 @@
                 </div>
               </div> -->
 
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -421,7 +435,7 @@
       <div class="row w-100">
         <div class="col-lg-4 d-flex align-items-center flex-column">
           <div class="footer-logo">
-            <a href="inicio.html" style="color: #fff !important">LOGO</a>
+            <a href="index.html" style="color: #fff !important">LOGO</a>
           </div>
           <div class="footer-navigation">
             <div class="footer-nav-links">
@@ -480,7 +494,7 @@
               <li>
                 <h4 style="color: #fff; font-size: 20px">Menú</h4>
               </li>
-              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="index.html">Inicio</a></li>
               <li><a href="nosotros.html">¿Quiénes somos?</a></li>
               <li><a href="propiedad.html">Propiedades</a></li>
               <li><a href="contacto.html">Contáctanos</a></li>
@@ -556,10 +570,12 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/owlCarousel.js"></script>
-    <script src="assets/js/viewProperties.js"></script>
+    <!-- <script src="assets/js/viewProperties.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script type="module" src="assets/js/index.js"></script>
-		<script type="module" src="assets/js/utils/getValuesOfinputs.js"></script>
+		<script type="module" src="assets/js/utils/getExchangeRate.js"></script>
+    
+		<!-- <script type="module" src="assets/js/utils/getValuesOfinputs.js"></script> -->
   </body>
 </html>
