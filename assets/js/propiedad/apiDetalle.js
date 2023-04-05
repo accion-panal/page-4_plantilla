@@ -16,6 +16,12 @@ let indicator;
 let img;
 
 
+
+
+
+
+// console.log(id); // Imprimirá "134" si ese es el valor actual del parámetro "id"
+
 data.images.forEach((images, index) => {img +=
     ` <div class="carousel-item ${ index == 0 ? "active" : ""} ">
         <img src="${images != undefined && images != null && images != "" ? images : "assets/img/Sin.png"}" />
@@ -182,6 +188,9 @@ document.getElementById('container-descrip-propiedad').innerHTML = `
 </div>
 </div>
 `
-
+document.getElementById('info-ubicacion').innerHTML = `
+<i class="fa-sharp fa-solid fa-location-dot"></i>
+<span>${data.commune != null && data.commune != undefined && data.commune != "" ? data.commune : "No registra comuna"}, ${data.region != null && data.region != undefined && data.region != "" ? data.region : "No registra región"}, Chile</span>
+`;
 
 }
