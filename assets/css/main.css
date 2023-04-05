@@ -3080,7 +3080,7 @@ footer .container .footer-nav-links ul li {
 
 .img-fluida{
   width: 100%;
-  height: auto;
+  height: 80vh;
 }
 
 .imgPropsCard{
@@ -3112,4 +3112,14 @@ footer .container .footer-nav-links ul li {
   height: 45% !important;
   border-radius: 5px !important;
 
+}
+
+.imgCardProp{
+  width: 100% !important;
+  height: 130vh !important;
+}
+
+.imgCardList{
+  width: 100% !important;
+  height: 40vh !important;
 }

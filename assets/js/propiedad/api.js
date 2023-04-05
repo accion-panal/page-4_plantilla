@@ -25,7 +25,7 @@ document.getElementById("total-prop").innerHTML = `<div>${response.meta.totalIte
           <div class="bg-success property-item-img">
             <a href="detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
               ><img
-                class="img-fluida"
+                class="img-fluida imgCardProp"
                 src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "assets/img/Sin.png" }"
                 alt=""
             /></a>
@@ -66,7 +66,7 @@ document.getElementById("total-prop").innerHTML = `<div>${response.meta.totalIte
             <div class="bg-success property-item-img">
             <a href="detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
               ><img
-                class="img-fluid"
+                class="imgCardList"
                 src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "assets/img/Sin.png" }"
                 alt=""
             /></a>
