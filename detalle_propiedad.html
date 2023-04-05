@@ -337,14 +337,16 @@
                 <h4>Contactar al corredor</h4>
               </div>
               <div>
-                <form>
+                <form  action="#"  method="post"  id="form-realtor">
                   <div class="form-group">
                     <input
                       type="text"
                       class="form-control"
-                      id="name"
+                      id="nombre"
                       aria-describedby="name"
                       placeholder="Nombre"
+                      value="Nombre"
+
                     />
                   </div>
 
@@ -355,6 +357,8 @@
                       id="email"
                       aria-describedby="email"
                       placeholder="E-mail"
+                      value="Email"
+
                     />
                   </div>
 
@@ -362,25 +366,31 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="subject"
+                      id="sujeto"
                       aria-describedby="subject"
                       placeholder="Asunto"
+                      value="Sujeto"
+
                     />
                   </div>
 
                   <div class="form-group">
                     <textarea
                       class="form-control"
-                      id="message"
+                      id="mensaje"
                       rows="3"
                       placeholder="Mensaje"
+                      value="Mensaje"
                     ></textarea>
                   </div>
 
                   <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn">Enviar</button>
+                    <button type="submit" value="Enviar" class="btn">Enviar</button>
                   </div>
                 </form>
+                <br>
+						    <div id="respuesta"></div>
+
               </div>
             </div>
           </div>
@@ -528,5 +538,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script type="module" src="/assets/js/detalles_prop.js"></script>
+    <script type="module" src="/assets/js/utils/PostContactDetail.js"></script>
+
   </body>
 </html>

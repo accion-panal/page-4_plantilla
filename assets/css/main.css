@@ -3092,3 +3092,24 @@ footer .container .footer-nav-links ul li {
   width: 500px !important;
   height: 400px;
 }
+
+.mapboxgl-canvas-container {
+  width: 1920px;
+  height: 80vh !important;
+  border-radius: 15px;
+}
+
+.mapboxgl-canvas {
+  width: max-content !important;
+}
+
+/* .container-map {
+  position: relative;
+} */
+
+#map {
+  width: 100% !important;
+  height: 45% !important;
+  border-radius: 5px !important;
+
+}

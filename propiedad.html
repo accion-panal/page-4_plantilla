@@ -45,6 +45,14 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+
+    <!-- MAPBOX CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+    <!--FIN MAPBOX CSS -->
+
+
   </head>
 
   <body>
@@ -360,46 +368,58 @@
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="row" id="container-propiedad">
-              <!-- <div class="col-property-item">
-                <div class="property-item">
-                  <div class="bg-success property-item-img">
-                    <a href="detalle_propiedad.html"
-                      ><img
-                        class="img-fluid"
-                        src="assets/img/properties/property-4.jpg"
-                        alt=""
-                    /></a>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="principal-info">
-                      <small>Casa / Arriendo</small>
-                      <a class="card-title" href="detalle_propiedad.html"
-                        >Casa amoblada excelente ubicación</a
-                      >
-                      <p>
-                        <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
-                      </p>
-                    </div>
-                    <div class="secundary-info">
-                      <small>REF: 232312</small>
-                      <div>
-                        <span>
-                          <i class="fa-sharp fa-solid fa-bed"></i> 3
-                        </span>
-                        <span>
-                          <i class="fa-sharp fa-solid fa-toilet"></i> 3
-                        </span>
+                </div>
+              </div>
+              <div class="tab-pane fade show " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row" id="container-propiedad-list">               
+                  <!-- <div class="col-property-item">
+                    <div class="property-item">
+                      <div class="row">
+                        <div class="col-lg-4">     
+                            <div class="bg-success property-item-img">
+                            <a href="detalle_propiedad.html"
+                              ><img
+                                class="img-fluid"
+                                src="assets/img/properties/property-4.jpg"
+                                alt=""
+                            /></a>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card-body">
+                              <div class="principal-info">
+                                <small>Casa / Arriendo</small>
+                                <a class="card-title" href="detalle_propiedad.html"
+                                  >Casa amoblada excelente ubicación</a
+                                >
+                                <p>
+                                  <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                                </p>
+                                </div>
+                              <div class="secundary-info">
+                                <small>REF: 232312</small>
+                                <div>
+                                  <span>
+                                    <i class="fa-sharp fa-solid fa-bed"></i> 3
+                                  </span>
+                                  <span>
+                                    <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="more-info">
+                                <p>UF: 16.800 / CLP 56.500.000</p>
+                              </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="more-info">
-                      <p>UF: 16.800 / CLP 56.500.000</p>
-                    </div>
-                  </div>
+                  </div>  -->
                 </div>
-              </div> -->
-
-                </div>
+              </div>
+              
+              <div class="tab-pane fade show " id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div id="map" style="display: block"></div> 
               </div>
             </div>
           </div>
@@ -577,6 +597,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script type="module" src="assets/js/index.js"></script>
+		<script type="module" src="assets/js/mapProp.js"></script>
+
 		<script type="module" src="assets/js/utils/getExchangeRate.js"></script>
 
 		<script type="module" src="assets/js/utils/filterOnSubmit.js"></script>

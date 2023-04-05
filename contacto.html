@@ -127,7 +127,7 @@
                 <div
                   class="col-lg-6 d-flex flex-column align-items-center justify-content-center"
                 >
-                  <form>
+                  <form method="post" id="form-contact">
                     <div class="row">
                       <div class="col-md-6 mb-2">
                         <div class="form-group">
@@ -136,6 +136,8 @@
                             name="name"
                             class="form-control"
                             placeholder="Nombre"
+                            id="nombre"
+                            value="Nombre"
                           />
                         </div>
                       </div>
@@ -143,10 +145,11 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <input
-                            type="email"
-                            name="email"
+                            type="email"                         
                             class="form-control"
                             placeholder="E-mail"
+                            id="email"
+                            value="Email"
                           />
                         </div>
                       </div>
@@ -158,6 +161,8 @@
                             name="subject"
                             class="form-control"
                             placeholder="Asunto"
+                            value="Sujeto"
+                            id="sujeto"
                           />
                         </div>
                       </div>
@@ -169,6 +174,8 @@
                             name="telephone"
                             class="form-control"
                             placeholder="Teléfono"
+                            value="Teléfono"
+                            id="phone"
                           />
                         </div>
                       </div>
@@ -177,18 +184,20 @@
                         <div class="form-group">
                           <textarea
                             class="form-control"
-                            id="exampleFormControlTextarea1"
                             rows="4"
                             placeholder="Mensaje"
+                            value="mensaje"
+                            id="mensaje"
                           ></textarea>
                         </div>
                       </div>
 
                       <div class="col-md-12">
-                        <button type="submit" class="w-100">Enviar</button>
+                        <button type="submit" value="Enviar" class="w-100">Enviar</button>
                       </div>
                     </div>
                   </form>
+						      <div id="respuesta"></div>
                 </div>
                 <div class="col-lg-6" style="margin-top: 3.3rem!important;">                 
                   <div class="section-subheader">
@@ -385,5 +394,8 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/owlCarousel.js"></script>
     <script src="assets/js/viewProperties.js"></script>
+
+		<script type="module" src="assets/js/utils/PostContact.js"></script>
+
   </body>
 </html>
