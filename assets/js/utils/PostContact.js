@@ -36,7 +36,7 @@ let requestOptions = {
 //   redirect: 'follow'
 };
  
-fetch("https://aulen.partnersadvisers.info/contact", requestOptions)
+fetch("https://aulen.partnersadvisers.info/contact/", requestOptions)
   .then(response => response.text())
   .then(result => respuesta.innerHTML = `<div class="alert alert-success" role="alert">
    Formulario enviado exitosamente, Muchas gracias ${firstName.value}!!

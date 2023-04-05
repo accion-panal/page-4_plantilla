@@ -337,12 +337,13 @@
                 <h4>Contactar al corredor</h4>
               </div>
               <div>
-                <form  action="#"  method="post"  id="form-realtor">
+                <form method="post"  id="form-realtor" name="FormSubmit">
                   <div class="form-group">
                     <input
                       type="text"
                       class="form-control"
                       id="nombre"
+                      name="name"
                       aria-describedby="name"
                       placeholder="Nombre"
                       value="Nombre"
@@ -355,6 +356,7 @@
                       type="email"
                       class="form-control"
                       id="email"
+                      name="email"
                       aria-describedby="email"
                       placeholder="E-mail"
                       value="Email"
@@ -367,6 +369,7 @@
                       type="text"
                       class="form-control"
                       id="sujeto"
+                      name="sujeto"
                       aria-describedby="subject"
                       placeholder="Asunto"
                       value="Sujeto"
@@ -378,6 +381,7 @@
                     <textarea
                       class="form-control"
                       id="mensaje"
+                      name="mensaje"
                       rows="3"
                       placeholder="Mensaje"
                       value="Mensaje"
@@ -539,6 +543,8 @@
 
     <script type="module" src="/assets/js/detalles_prop.js"></script>
     <script type="module" src="/assets/js/utils/PostContactDetail.js"></script>
+    <script type="module" src="/assets/js/utils/SendEmailDetail.js"></script>
+
 
   </body>
 </html>

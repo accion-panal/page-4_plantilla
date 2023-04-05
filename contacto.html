@@ -127,7 +127,7 @@
                 <div
                   class="col-lg-6 d-flex flex-column align-items-center justify-content-center"
                 >
-                  <form method="post" id="form-contact">
+                  <form method="post" id="form-contact" name="FormSubmit" action="#">
                     <div class="row">
                       <div class="col-md-6 mb-2">
                         <div class="form-group">
@@ -145,7 +145,8 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <input
-                            type="email"                         
+                            type="email"   
+                            name="email"                      
                             class="form-control"
                             placeholder="E-mail"
                             id="email"
@@ -158,7 +159,7 @@
                         <div class="form-group">
                           <input
                             type="text"
-                            name="subject"
+                            name="sujeto"
                             class="form-control"
                             placeholder="Asunto"
                             value="Sujeto"
@@ -170,8 +171,8 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <input
-                            type="text"
-                            name="telephone"
+                            type="number"
+                            name="phone"
                             class="form-control"
                             placeholder="Teléfono"
                             value="Teléfono"
@@ -184,6 +185,7 @@
                         <div class="form-group">
                           <textarea
                             class="form-control"
+                            name="mensaje"
                             rows="4"
                             placeholder="Mensaje"
                             value="mensaje"
@@ -396,6 +398,8 @@
     <script src="assets/js/viewProperties.js"></script>
 
 		<script type="module" src="assets/js/utils/PostContact.js"></script>
+		<script type="module" src="assets/js/utils/SendEmail.js"></script>
+
 
   </body>
 </html>
