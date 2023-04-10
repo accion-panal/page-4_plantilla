@@ -32,7 +32,7 @@ const map = new mapboxgl.Map({
 
             // create the popup
             const popup = new mapboxgl.Popup({ offset: 25 }).setText(`
-            Dirección: 43 Raymouth Rd. Baltemoer, London 3910`)
+            ${data.title}`)
             
             // create DOM element for the marker
             const ubicacion = document.createElement('div');
