@@ -1,14 +1,10 @@
 import api from "./AuthencationServices.js"
 
-export const getProperties = async(realtorId, statusId , companyId) => {
-  let {data} = await api.get(`properties?realtorId=${realtorId}&statusId=${statusId}&companyId=${companyId}`);
+export const getProperties = async(page, limit, realtorId, statusId , companyId) => {
+  let {data} = await api.get(`properties?page=${page}&limit=${limit}&realtorId=${realtorId}&statusId=${statusId}&companyId=${companyId}`);
   return data;
 }
 
-// export const getPropertiesCant = async( totalItems = "") => {
-//   let {meta} = await api.get(`properties?totalItems=${totalItems}`);
-//   return meta;
-// }
 
 export const getPropertiesForId = async( id ,  statusId, companyId) => {
   let data = await api.get(`properties/${id}?&statusId=${statusId}&companyId=${companyId}`);
@@ -16,7 +12,7 @@ export const getPropertiesForId = async( id ,  statusId, companyId) => {
 }
 
 
-export const getPropertiesOnForm = async(statusId = 1, companyId=1, operationType="", typeOfProperty="", region="", commune="", min_price=0, max_price, bathrooms, bedrooms,covered_parking_lots) => {
+export const getPropertiesOnForm = async(statusId = 1, companyId=1, operationType="", typeOfProperty="", region="", commune="", min_price=0, max_price=0, bathrooms="", bedrooms="",covered_parking_lots="") => {
 const _statusId = `${statusId}`;
 const _companyId = `${companyId}`;
 const _operationType = operationType?.length > 0 ? operationType : false;

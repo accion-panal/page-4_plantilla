@@ -152,19 +152,19 @@ document.getElementById('container-descrip-propiedad').innerHTML = `
       <li>
         <a href="#"
           >Superficie Construida
-          <span class="text-dark">203 m<sup>${data.surface_m2 != null && data.surface_m2 != undefined && data.surface_m2 != "" ? data.surface_m2 : "0"}</sup></span></a
+          <span class="text-dark">${data.surface_m2 != null && data.surface_m2 != undefined && data.surface_m2 != "" ? data.surface_m2 : "0"} m<sup>2</sup></span></a
         >
       </li>
       <li>
         <a href="#"
           >Superficie Terreno
-          <span class="text-dark">203 m<sup>${data.surface_m2 != null && data.surface_m2 != undefined && data.surface_m2 != "" ? data.surface_m2 : "0"}</sup></span></a
+          <span class="text-dark">${data.surface_m2 != null && data.surface_m2 != undefined && data.surface_m2 != "" ? data.surface_m2 : "0"} m<sup>2</sup></span></a
         >
       </li>
       <li>
         <a href="#"
           >Superficie Privada
-          <span class="text-dark">203 m<sup>${data.surface_m2 != null && data.surface_m2 != undefined && data.surface_m2 != "" ? data.surface_m2 : "0"}</sup></span></a
+          <span class="text-dark">${data.surface_m2 != null && data.surface_m2 != undefined && data.surface_m2 != "" ? data.surface_m2 : "0"} m<sup>2</sup></span></a
         >
       </li>
       <li>

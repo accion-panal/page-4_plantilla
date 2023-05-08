@@ -3123,3 +3123,8 @@ footer .container .footer-nav-links ul li {
   width: 100% !important;
   height: 40vh !important;
 }
+
+.pagination li {
+  display:inline-block !important;
+  padding:5px !important;
+}

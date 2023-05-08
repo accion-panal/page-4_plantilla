@@ -7,4 +7,4 @@ const ExchangeRateServices = {
     },
   };
   
- export default ExchangeRateServices;
+ export default ExchangeRateServices;  

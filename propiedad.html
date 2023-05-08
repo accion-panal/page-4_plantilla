@@ -46,6 +46,8 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>   -->
 
     <!-- MAPBOX CSS -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
@@ -106,7 +108,7 @@
               <li><a href="nosotros.html">¿Quiénes somos?</a></li>
               <li><a href="propiedad.html" class="active">Propiedades</a></li>
               <li><a href="contacto.html">Contáctanos</a></li>
-              <li><a href="intranet.html">Intranet</a></li>
+              <li><a href="http://190.114.255.247:195/">Intranet</a></li>
             </ul>
           </nav>
         </div>
@@ -181,10 +183,18 @@
             <div class="col-md-4">
               <select class="form-select py-2" id="typeOfProperty">
                 <option value="" selected>Tipo de Propiedad</option>
-                <option value="casa">Casa</option>
+              	<option value="departamento">Departamento</option>
+								<option value="casa">Casa</option>
+								<option value="parcela">Parcela</option>
 								<option value="bodega">Bodega</option>
-								<option value="departamento">Departamento</option>
-								<option value="estacionamientos">Estacionamiento</option>
+								<option value="terreno">Terreno</option>
+								<option value="estacionamiento">Estacionamiento</option>
+								<option value="industrial">Industrial</option>
+								<option value="agricola">Agricola</option>
+								<option value="local">Local Comercial</option>
+								<option value="oficina">Oficina</option>
+								<option value="sitio">Sitio</option>
+								<option value="Terreno En Construccion">Terreno En Construccion</option>
               </select>
             </div>
 
@@ -325,7 +335,7 @@
               <li class="nav-item" role="presentation">
                 <button class="btn btn-light border-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" ><i class="bi bi-pin-map"></i></button>
               </li>
-              </ul>
+            </ul>
             <!-- <div
               class="d-flex align-items-center justify-content-end preview-layout"
             >
@@ -366,48 +376,87 @@
         <div class="properties">
           <div class="container py-1 wow fadeInUp" data-wow-delay="0.1s">
             <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="row" id="container-propiedad">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">  
+                    <div class="row" id="container-propiedad">
+                    </div>
+                    <div class="pagination bg-white rounded" id="buttons">
+                      <!-- <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link" href="" tabindex="-1">
+                            <i class="fa-sharp fa-solid fa-arrow-left"></i>
+                          </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active">
+                          <a class="page-link" href="#"
+                            >2 <span class="sr-only">(current)</span></a
+                          >
+                        </li> 
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="">
+                            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                          </a>
+                        </li> 
+                      </ul> -->
+                    </div>
+  
                 </div>
-              </div>
+              
               <div class="tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="row" id="container-propiedad-list">               
-                  
-                </div>
+                    <div class="row" id="container-propiedad-list">                                
+                    </div>     
+                    <div class="pagination bg-white rounded" id="buttons">
+                      <!-- <ul class="">
+                        <li class="page-item" id="btn-prev">
+                          <a class="page-link" href="" tabindex="-1">
+                            <i class="fa-sharp fa-solid fa-arrow-left"></i>
+                          </a>
+                        </li>
+                        <li class="page-item" id="btn-next">
+                          <a class="page-link" href="">
+                            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+                          </a>
+                        </li> 
+                      </ul> -->
+                    </div>          
               </div>
               
               <div class="tab-pane fade active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <div id="map"></div> 
               </div>
             </div>
+            </div>
           </div>
         </div>
         <!-- End Porperties section -->
 
-        <nav aria-label="..." class="bg-white rounded">
-          <ul class="pagination">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">
-                <i class="fa-sharp fa-solid fa-arrow-left"></i>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active">
-              <a class="page-link" href="#"
-                >2 <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">
-                <i class="fa-sharp fa-solid fa-arrow-right"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
+       
       </div>
     </div>
     <!-- Properties End -->
+
+    <!-- <nav aria-label="..." class="bg-white rounded" id="pagination-nav">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="" tabindex="-1">
+            <i class="fa-sharp fa-solid fa-arrow-left"></i>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#"
+            >2 <span class="sr-only">(current)</span></a
+          >
+        </li> 
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="">
+            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+          </a>
+        </li> 
+      </ul>
+    </nav> -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -555,6 +604,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script type="module" src="assets/js/index.js"></script>
+		<!-- <script type="module" src="assets/js/propiedad/api.js"></script> -->
 		<script type="module" src="assets/js/mapProp.js"></script>
 
 		<script type="module" src="assets/js/utils/getExchangeRate.js"></script>
@@ -563,9 +613,10 @@
 		<script type="module" src="assets/js/utils/filterOnSubmitIndex.js"></script>
     
 		<script type="module" src="assets/js/utils/getSelects.js"></script>
-    
 
-    
+   
+  
+    <!-- <script src="assets/js/paginationNav.js" ></script> -->
 		<!-- <script type="module" src="assets/js/utils/getValuesOfinputs.js"></script> -->
   </body>
 </html>

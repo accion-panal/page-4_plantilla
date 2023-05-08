@@ -9,7 +9,7 @@ export default async function apiDestCall() {
           `<div class="col-property-item">
             <div class="property-item">
               <div class="bg-success property-item-img">
-                <a href="detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
+                <a href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
                   ><img
                     class="img-fluid"
                     src="${filtrado.image != undefined && filtrado.image != "" && filtrado.image != null ? filtrado.image : "assets/img/Sin.png" }"
@@ -20,7 +20,7 @@ export default async function apiDestCall() {
               <div class="card-body">
                 <div class="principal-info">
                   <small>${filtrado.operation}</small>
-                  <a class="card-title" href="detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
+                  <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
                     >${filtrado.title}</a
                   >
                   <p>
