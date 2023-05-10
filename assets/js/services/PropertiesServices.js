@@ -12,7 +12,7 @@ export const getPropertiesForId = async( id ,  statusId, companyId) => {
 }
 
 
-export const getPropertiesOnForm = async(statusId = 1, companyId=1, operationType="", typeOfProperty="", region="", commune="", min_price=0, max_price=0, bathrooms="", bedrooms="",covered_parking_lots="") => {
+export const getPropertiesOnForm = async(statusId = 1, companyId=1, operationType="", typeOfProperty="", region="", commune="", min_price=0, max_price=0, bathrooms=0, bedrooms=0,covered_parking_lots=0) => {
 const _statusId = `${statusId}`;
 const _companyId = `${companyId}`;
 const _operationType = operationType?.length > 0 ? operationType : false;

@@ -24,13 +24,30 @@ let img;
 
 data.images.forEach((images, index) => {img +=
     ` <div class="carousel-item ${ index == 0 ? "active" : ""} ">
-        <img src="${images != undefined && images != null && images != "" ? images : "assets/img/Sin.png"}" />
+        <img src="${images != undefined && images != null && images != "" ? images : "assets/img/Sin.png"}" style="height:900px; width: 100% !important" />
      </div> 	
     `
     indicator += `
     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="${index}" ${index == 0 ? "class = active": ""} aria-current="true" aria-label="${index + 1}"></button>
     `
     })
+
+
+document.getElementById('carrucel-img-prop').innerHTML = `
+ <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" style="height: 80vh !important;">
+ <div class="carousel-indicators">
+			${indicator != undefined && indicator != null ? indicator : "no registra imagenes"}
+  </div>   
+
+        ${img}
+    
+    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>`;
 
 
 document.getElementById('titleProp').innerHTML = 
@@ -47,41 +64,7 @@ document.getElementById('titleProp').innerHTML =
     </div>
 </div> `
 
-// document.getElementById('container-carrucel-imgProps').innerHTML = 
-// `
-// <div
-//           id="hero-carousel"
-//           class="carousel slide"
-//           data-bs-ride="carousel"
-//           data-bs-interval="5000"
-//           style="height: 80vh !important;"
-//         >
-//          </div>
-            
-//           <a
-//             class="carousel-control-prev"
-//             href="#hero-carousel"
-//             role="button"
-//             data-bs-slide="prev"
-//           >
-//             <span
-//               class="carousel-control-prev-icon bi bi-chevron-left"
-//               aria-hidden="true"
-//             ></span>
-//           </a>
-//           <a
-//             class="carousel-control-next"
-//             href="#hero-carousel"
-//             role="button"
-//             data-bs-slide="next"
-//           >
-//             <span
-//               class="carousel-control-next-icon bi bi-chevron-right"
-//               aria-hidden="true"
-//             ></span>
-//           </a>
-//         </div>
-// `
+
 
 document.getElementById('container-descrip-propiedad').innerHTML = `
 <div class="col-sm-8">

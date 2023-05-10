@@ -46,6 +46,9 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
   </head>
 
   <body>
@@ -302,45 +305,17 @@
         <div class="section-header section-header__uppercase">
           <h2>Propiedades Destacadas</h2>
         </div>
-
-        <div
-          class="owl-carousel properties-carousel wow fadeInUp"
-          data-wow-delay="0.1s" id="container-prop-destacada"
-        >
-          <!-- <div class="col-property-item">
-            <div class="property-item">
-              <div class="bg-success property-item-img">
-                <a href="detalle_propiedad.html"
-                  ><img
-                    class="img-fluid"
-                    src="assets/img/properties/property-4.jpg"
-                    alt=""
-                /></a>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-11">
+            <section class="splide" aria-label="Splide Basic HTML Example">
+              <div class="splide__track">
+                <ul class="splide__list" id="container-prop-destacada">
+                  <!-- <li class="splide__slide">Slide 01</li> -->
+                 
+                </ul>
               </div>
-
-              <div class="card-body">
-                <div class="principal-info">
-                  <small>Casa / Arriendo</small>
-                  <a class="card-title" href="detalle_propiedad.html"
-                    >Casa amoblada excelente ubicación</a
-                  >
-                  <p>
-                    <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
-                  </p>
-                </div>
-                <div class="secundary-info">
-                  <small>REF: 232312</small>
-                  <div>
-                    <span> <i class="fa-sharp fa-solid fa-bed"></i> 3 </span>
-                    <span> <i class="fa-sharp fa-solid fa-toilet"></i> 3 </span>
-                  </div>
-                </div>
-                <div class="more-info">
-                  <p>UF: 16.800 / CLP 56.500.000</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
+            </section>
+          </div>
         </div>
       </div>
       <!-- <div class="container wow fadeInUp" data-wow-delay="0.1s" style="margin-top:-100px;">
@@ -615,6 +590,8 @@
     ></a>
 
     <div id="preloader"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

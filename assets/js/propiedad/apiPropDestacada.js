@@ -1,44 +1,70 @@
 import { getProperties } from "../services/PropertiesServices.js"
+import	ExchangeRateServices from  "../services/ExchangeRateServices.js";
 
+import {parseToCLPCurrency, clpToUf} from "../utils/getExchangeRate.js"
 
 export default async function apiDestCall() {
-    let {data} = await getProperties(0,1,1);
+    let {data} = await getProperties(1,10,0,1,1);
     let filtrado = data.filter(data => data.highlighted != null && data.highlighted  != false );
-  
+
+    const response = await ExchangeRateServices.getExchangeRateUF();
+    const ufValue = response?.UFs[0]?.Valor
+    const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
+      
           document.getElementById('container-prop-destacada').innerHTML = filtrado.map(data => 
           `<div class="col-property-item">
             <div class="property-item">
-              <div class="bg-success property-item-img">
+              <div class="bg-success property-item-img"  style="height:288px">
                 <a href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
                   ><img
                     class="img-fluid"
-                    src="${filtrado.image != undefined && filtrado.image != "" && filtrado.image != null ? filtrado.image : "assets/img/Sin.png" }"
+                    src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "assets/img/Sin.png" }"
                     alt=""
+                   
                 /></a>
               </div>
   
               <div class="card-body">
                 <div class="principal-info">
-                  <small>${filtrado.operation}</small>
+                  <small>${data.operation}</small>
                   <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
-                    >${filtrado.title}</a
+                    >${data.title}</a
                   >
                   <p>
-                    <i class="bi bi-pin-map"></i>${filtrado.address != null && filtrado.address != undefined && filtrado.address != "" ? filtrado.address : "No registra dirección"},${filtrado.commune != null & filtrado.commune != undefined && filtrado.commune != "" ? filtrado.commune : "No registra comuna"}
+                    <i class="bi bi-pin-map"></i>${data.address != null && data.address != undefined && data.address != "" ? data.address : "No registra dirección"},${data.commune != null & data.commune != undefined && data.commune != "" ? data.commune : "No registra comuna"}
                   </p>
                 </div>
                 <div class="secundary-info">
-                  <small>${filtrado.id}</small>
+                  <small>${data.id}</small>
                   <div>
-                    <span> <i class="fa-sharp fa-solid fa-bed"></i> ${filtrado.bedroom != undefined && filtrado.bedroom != "" && filtrado.bedroom != null ? filtrado.bedroom : "0"} </span>
-                    <span> <i class="fa-sharp fa-solid fa-toilet"></i> ${filtrado.bathrooms != undefined  && filtrado.bathrooms != "" && filtrado.bathrooms != "null" && filtrado.bathrooms != null ? filtrado.bathrooms : "0"} </span>
+                    <span> <i class="fa-sharp fa-solid fa-bed"></i> ${data.bedroom != undefined && data.bedroom != "" && data.bedroom != null ? data.bedroom : "0"} </span>
+                    <span> <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined  && data.bathrooms != "" && data.bathrooms != "null" && data.bathrooms != null ? data.bathrooms : "0"} </span>
                   </div>
                 </div>
                 <div class="more-info">
-                  <p>UF ${clpToUf(filtrado.price, ufValueAsNumber)} - ${parseToCLPCurrency(filtrado?.price)}</p>
+                  <p>UF ${clpToUf(data.price, ufValueAsNumber)} - ${parseToCLPCurrency(data?.price)}</p>
                 </div>
               </div>
             </div>
           </div>`
           ).join('');
+
+          let splide = new Splide(".splide", {
+            type    : 'loop',
+            perPage : 3,
+            autoplay: true,
+            autoWidth: true,
+            drag:true,
+            
+        });
+        splide.mount();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+	let splide = new Splide(".splide");
+	// let splideList = new Splide(".splide");
+	// splideList.mount();
+	splide.mount();
+});
+
+apiDestCall()

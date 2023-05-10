@@ -919,11 +919,13 @@ section {
 }
 
 .outstanding-properties .property-item {
+  height: 600px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  margin: 0.7rem 0;
+  margin: 0 10px 0 0;
   background-color: var(--bg-white);
   border: 1px solid var(--bg-light);
   padding: 0.5rem;
