@@ -15,10 +15,10 @@ export default async function apiDestCall() {
           `<li class="splide__slide">
           <div class="col-property-item">
             <div class="property-item">
-              <div class="bg-success property-item-img"  style="height:288px">
+              <div class="bg-success property-item-img"  style="height:272px">
                 <a href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
                   ><img
-                    class="img-fluid"
+                    class="img-fluid imgPropsCard"
                     src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "assets/img/Sin.png" }"
                     alt=""
                    
@@ -36,7 +36,7 @@ export default async function apiDestCall() {
                   </p>
                 </div>
                 <div class="secundary-info">
-                  <small>${data.id}</small>
+                  <small>REF: ${data.id}</small>
                   <div>
                     <span> <i class="fa-sharp fa-solid fa-bed"></i> ${data.bedroom != undefined && data.bedroom != "" && data.bedroom != null ? data.bedroom : "0"} </span>
                     <span> <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined  && data.bathrooms != "" && data.bathrooms != "null" && data.bathrooms != null ? data.bathrooms : "0"} </span>
@@ -54,7 +54,7 @@ export default async function apiDestCall() {
           let splide = new Splide(".splide", {
             type    : 'loop',
             perPage : 3,
-            autoplay: true,
+            autoplay: 'play',
             // autoWidth: true,
             drag:true,
             

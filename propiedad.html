@@ -46,6 +46,8 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
+    
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>   -->
 
@@ -314,149 +316,404 @@
     </div>
     <!-- Filter search End -->
 
-    <!-- ======= Utstanding Properties Section ======= -->
-    <div class="outstanding-properties">
-      <div class="container wow fadeInUp" data-wow-delay="0.1s">
-        <div class="section-header section-header__uppercase">
-          <h2>Propiedades</h2>
-        </div>
-        <div class="section-display-conf">
-          <div id="total-prop">
-            
-          </div>
-          <div>
-            <ul class="nav nav-pills " id="pills-tab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="btn btn-light border-0 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"> <i class="bi bi-grid-fill"></i></button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="btn btn-light border-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <i class="bi bi-list-ul"></i></button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="btn btn-light border-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" ><i class="bi bi-pin-map"></i></button>
-              </li>
-            </ul>
-            <!-- <div
-              class="d-flex align-items-center justify-content-end preview-layout"
-            >
-              <button type="button" class="btn btn-light border-0 btn-list">
-                <span>
-                  <i class="bi bi-list-ul"></i>
-                </span>
-              </button>
-
-              <button type="button" class="btn btn-light border-0 btn-grid">
-                <span>
-                  <i class="bi bi-grid-fill"></i>
-                </span>
-              </button>
-
-              <button type="button" class="btn btn-light border-0 btn-map">
-                <span>
-                  <i class="bi bi-pin-map"></i>
-                </span>
-              </button>
-            </div> -->
-          </div>
-        </div>
-
-        <div>
-          <div class="d-flex align-items-center justify-content-end">
-            <div class="d-flex flex-row align-items-center">
-              <p class="text-nowrap pt-3 px-2">Ordenar por:</p>
-              <select class="form-select border">
-                <option selected>Relevancia</option>
-                <option value="1">Precio de mayor a menor</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- ======= Properties Section ======= -->
-        <div class="properties">
-          <div class="container py-1 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">  
-                    <div class="row" id="container-propiedad">
-                    </div>
-                    <div class="pagination bg-white rounded" id="buttons">
-                      <!-- <ul class="pagination">
-                        <li class="page-item">
-                          <a class="page-link" href="" tabindex="-1">
-                            <i class="fa-sharp fa-solid fa-arrow-left"></i>
-                          </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active">
-                          <a class="page-link" href="#"
-                            >2 <span class="sr-only">(current)</span></a
-                          >
-                        </li> 
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="">
-                            <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                          </a>
-                        </li> 
-                      </ul> -->
-                    </div>
-  
-                </div>
-              
-              <div class="tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <div class="row" id="container-propiedad-list">                                
-                    </div>     
-                    <div class="pagination bg-white rounded" id="buttons">
-                      <!-- <ul class="">
-                        <li class="page-item" id="btn-prev">
-                          <a class="page-link" href="" tabindex="-1">
-                            <i class="fa-sharp fa-solid fa-arrow-left"></i>
-                          </a>
-                        </li>
-                        <li class="page-item" id="btn-next">
-                          <a class="page-link" href="">
-                            <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                          </a>
-                        </li> 
-                      </ul> -->
-                    </div>          
-              </div>
-              
-              <div class="tab-pane fade active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div id="map"></div> 
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Porperties section -->
-
-       
+  <!-- ======= Utstanding Properties Section ======= -->
+  <div class="outstanding-properties">
+    <div class="container wow fadeInUp" data-wow-delay="0.1s">
+      <div class="section-header section-header__uppercase">
+        <h2>Propiedades</h2>
       </div>
-    </div>
-    <!-- Properties End -->
-
-    <!-- <nav aria-label="..." class="bg-white rounded" id="pagination-nav">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="" tabindex="-1">
-            <i class="fa-sharp fa-solid fa-arrow-left"></i>
-          </a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item active">
-          <a class="page-link" href="#"
-            >2 <span class="sr-only">(current)</span></a
+      <div class="section-display-conf">
+        <div id="total-prop">
+          <span>De 1 a 12 Propiedades</span>
+        </div>
+        <div>
+          <div
+            class="d-flex align-items-center justify-content-end preview-layout"
           >
-        </li> 
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="">
-            <i class="fa-sharp fa-solid fa-arrow-right"></i>
-          </a>
-        </li> 
-      </ul>
-    </nav> -->
+          <ul class="nav nav-pills " id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-light border-0 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"> <i class="bi bi-grid-fill"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-light border-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <i class="bi bi-list-ul"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="btn btn-light border-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" ><i class="bi bi-pin-map"></i></button>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="d-flex align-items-center justify-content-end">
+          <div class="d-flex flex-row align-items-center">
+            <p class="text-nowrap pt-3 px-2">Ordenar por:</p>
+            <select class="form-select border">
+              <option selected>Relevancia</option>
+              <option value="1">Precio de mayor a menor</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= Properties Section ======= -->
+      <div class="properties">
+        <div class="container py-1 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"> 
+              <div class="row d-flex" id="container-propiedad">
+                
+                <!-- <div class="col-property-item col-lg-4 col-md-6 col-sm-6" >
+                  <div class="property-item">
+                    <div class="bg-success property-item-img">
+                      <a href="property-details.html"
+                        ><img
+                          class="img-fluid"
+                          src="assets/img/Sin.png"
+                          alt=""
+                      /></a>
+                    </div>
+    
+                    <div class="card-body">
+                      <div class="principal-info">
+                        <small>Casa / Arriendo</small>
+                        <a class="card-title" href="property-details.html"
+                          >Casa amoblada excelente ubicación</a
+                        >
+                        <p>
+                          <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                        </p>
+                      </div>
+                      <div class="secundary-info">
+                        <small>REF: 232312</small>
+                        <div>
+                          <span>
+                            <i class="fa-sharp fa-solid fa-bed"></i> 3
+                          </span>
+                          <span>
+                            <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                          </span>
+                        </div>
+                      </div>
+                      <div class="more-info">
+                        <p>UF: 16.800 / CLP 56.500.000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>       
+            </div>
+            <div class="tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="row" id="container-propiedad-list">  
+                
+                  <!-- <div class="property-item flex-row align-items-center">
+                    <div class="bg-success property-item-img">
+                      <a href="property-details.html"
+                        ><img
+                          class="img-fluid"
+                          src="assets/img/Sin.png"
+                          alt=""
+                      /></a>
+                    </div>
+    
+                    <div class="card-body">
+                      <div class="principal-info">
+                        <small>Casa / Arriendo</small>
+                        <a class="card-title" href="property-details.html"
+                          >Casa amoblada excelente ubicación</a
+                        >
+                        <p>
+                          <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                        </p>
+                      </div>
+                      <div class="secundary-info">
+                        <small>REF: 232312</small>
+                        <div>
+                          <span>
+                            <i class="fa-sharp fa-solid fa-bed"></i> 3
+                          </span>
+                          <span>
+                            <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                          </span>
+                        </div>
+                      </div>
+                      <div class="more-info">
+                        <p>UF: 16.800 / CLP 56.500.000</p>
+                      </div>
+                    </div>
+                  </div> -->
+                                              
+              </div>              
+            </div>
+            <div class="tab-pane fade active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <div id="map"></div> 
+            </div>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col-property-item">
+              <div class="property-item">
+                <div class="bg-success property-item-img">
+                  <a href="property-details.html"
+                    ><img
+                      class="img-fluid"
+                      src="assets/img/properties/property-4.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="card-body">
+                  <div class="principal-info">
+                    <small>Casa / Arriendo</small>
+                    <a class="card-title" href="property-details.html"
+                      >Casa amoblada excelente ubicación</a
+                    >
+                    <p>
+                      <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                    </p>
+                  </div>
+                  <div class="secundary-info">
+                    <small>REF: 232312</small>
+                    <div>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-bed"></i> 3
+                      </span>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                      </span>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <p>UF: 16.800 / CLP 56.500.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-property-item">
+              <div class="property-item">
+                <div class="bg-success property-item-img">
+                  <a href="property-details.html"
+                    ><img
+                      class="img-fluid"
+                      src="assets/img/properties/property-4.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="card-body">
+                  <div class="principal-info">
+                    <small>Casa / Arriendo</small>
+                    <a class="card-title" href="property-details"
+                      >Casa amoblada excelente ubicación</a
+                    >
+                    <p>
+                      <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                    </p>
+                  </div>
+                  <div class="secundary-info">
+                    <small>REF: 232312</small>
+                    <div>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-bed"></i> 3
+                      </span>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                      </span>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <p>UF: 16.800 / CLP 56.500.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-property-item">
+              <div class="property-item">
+                <div class="bg-success property-item-img">
+                  <a href="property-details.html"
+                    ><img
+                      class="img-fluid"
+                      src="assets/img/properties/property-4.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="card-body">
+                  <div class="principal-info">
+                    <small>Casa / Arriendo</small>
+                    <a class="card-title" href="property-details.html"
+                      >Casa amoblada excelente ubicación</a
+                    >
+                    <p>
+                      <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                    </p>
+                  </div>
+                  <div class="secundary-info">
+                    <small>REF: 232312</small>
+                    <div>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-bed"></i> 3
+                      </span>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                      </span>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <p>UF: 16.800 / CLP 56.500.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-property-item">
+              <div class="property-item">
+                <div class="bg-success property-item-img">
+                  <a href="property-details.html"
+                    ><img
+                      class="img-fluid"
+                      src="assets/img/properties/property-4.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="card-body">
+                  <div class="principal-info">
+                    <small>Casa / Arriendo</small>
+                    <a class="card-title" href="property-details.html"
+                      >Casa amoblada excelente ubicación</a
+                    >
+                    <p>
+                      <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                    </p>
+                  </div>
+                  <div class="secundary-info">
+                    <small>REF: 232312</small>
+                    <div>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-bed"></i> 3
+                      </span>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                      </span>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <p>UF: 16.800 / CLP 56.500.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-property-item">
+              <div class="property-item">
+                <div class="bg-success property-item-img">
+                  <a href="property-details.html"
+                    ><img
+                      class="img-fluid"
+                      src="assets/img/properties/property-4.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="card-body">
+                  <div class="principal-info">
+                    <small>Casa / Arriendo</small>
+                    <a class="card-title" href="property-details.html"
+                      >Casa amoblada excelente ubicación</a
+                    >
+                    <p>
+                      <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                    </p>
+                  </div>
+                  <div class="secundary-info">
+                    <small>REF: 232312</small>
+                    <div>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-bed"></i> 3
+                      </span>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                      </span>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <p>UF: 16.800 / CLP 56.500.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-property-item">
+              <div class="property-item">
+                <div class="bg-success property-item-img">
+                  <a href="property-details.html"
+                    ><img
+                      class="img-fluid"
+                      src="assets/img/properties/property-4.jpg"
+                      alt=""
+                  /></a>
+                </div>
+
+                <div class="card-body">
+                  <div class="principal-info">
+                    <small>Casa / Arriendo</small>
+                    <a class="card-title" href="property-details.html"
+                      >Casa amoblada excelente ubicación</a
+                    >
+                    <p>
+                      <i class="bi bi-pin-map"></i> Lo Barnechea, LO BARNECHEA
+                    </p>
+                  </div>
+                  <div class="secundary-info">
+                    <small>REF: 232312</small>
+                    <div>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-bed"></i> 3
+                      </span>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-toilet"></i> 3
+                      </span>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <p>UF: 16.800 / CLP 56.500.000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!-- End Porperties section -->
+
+      <nav aria-label="..." class="bg-white rounded">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">
+              <i class="fa-sharp fa-solid fa-arrow-left"></i>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#"
+              >2 <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              <i class="fa-sharp fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- Properties End -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
@@ -599,7 +856,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/owlCarousel.js"></script>
+    <!-- <script src="assets/js/owlCarousel.js"></script> -->
     <!-- <script src="assets/js/viewProperties.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -919,13 +919,24 @@ section {
 }
 
 .outstanding-properties .property-item {
-  height: 600px;
-  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  margin: 0 10px 0 0;
+  margin: 0.7rem 0 5px 0;
+  background-color: var(--bg-white);
+  border: 1px solid var(--bg-light);
+  padding: 0.5rem;
+}
+
+.outstanding-properties .property-item-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  border-radius: 10px;
+  margin: 0.7rem 0;
   background-color: var(--bg-white);
   border: 1px solid var(--bg-light);
   padding: 0.5rem;
@@ -3087,12 +3098,12 @@ footer .container .footer-nav-links ul li {
 
 .imgPropsCard{
   width: 100% !important;
-  height: 227px;
+  height: 272px;
 }
 
 .imgPropsList{
   width: 500px !important;
-  height: 400px;
+  height: 272px;
 }
 
 .mapboxgl-canvas-container {
@@ -3116,17 +3127,21 @@ footer .container .footer-nav-links ul li {
 
 }
 
-.imgCardProp{
-  width: 100% !important;
-  height: 130vh !important;
+/* .imgCardProp{
+  width: 60vh !important;
+  height: 40vh !important;
 }
 
 .imgCardList{
-  width: 100% !important;
+  width: 50vh !important;
   height: 40vh !important;
-}
+} */
 
 .pagination li {
   display:inline-block !important;
   padding:5px !important;
+}
+
+.property-item-img{
+  height: 272px !important;
 }
