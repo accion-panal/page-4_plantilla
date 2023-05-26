@@ -349,9 +349,11 @@
         <div class="d-flex align-items-center justify-content-end">
           <div class="d-flex flex-row align-items-center">
             <p class="text-nowrap pt-3 px-2">Ordenar por:</p>
-            <select class="form-select border">
-              <option selected>Relevancia</option>
-              <option value="1">Precio de mayor a menor</option>
+            <select id="FilterPrice" class="form-select border">
+              <!-- <option selected>Relevancia</option> -->
+              <option disabled selected>Seleccione una opción</option>
+							<option value="MenorMayor">Precio de menor a mayor</option>
+							<option value="MayorMenor">Precio de mayor a menor</option>
             </select>
           </div>
         </div>
