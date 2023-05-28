@@ -23,7 +23,6 @@ const map = new mapboxgl.Map({
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [parseFloat(LngLat[0]), parseFloat(LngLat[1])],
-    projection: 'globe',
     zoom: 15,
     
 });

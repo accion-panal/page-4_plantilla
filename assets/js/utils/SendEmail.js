@@ -28,6 +28,6 @@ fetch("https://formsubmit.co/ajax/fabian.salas.astete@gmail.com", {
 })
   .then(response => response.json())
   .then(data => console.log(data))
-  .catch(error => console.log('Error al enviar correo',error));
+  .catch(error => console.log('Error al enviar correo', error));
 
 })

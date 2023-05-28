@@ -109,7 +109,7 @@ export default async function apiCall() {
             <small>REF: ${data.id}</small>
             <div>
               <span>
-                <i class="fa-sharp fa-solid fa-bed"></i>${data.bedroom != undefined && data.bedrooms != null && data.bedrooms != "" ? data.bedrooms : "0"}
+                <i class="fa-sharp fa-solid fa-bed"></i>${data.bedrooms != undefined && data.bedrooms != null && data.bedrooms != "" ? data.bedrooms : "0"}
               </span>
               <span>
                 <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined && data.bathrooms != null && data.bathrooms != "" ? data.bathrooms : "0"}
