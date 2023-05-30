@@ -2553,11 +2553,19 @@ footer .container .footer-nav-links ul li {
   color: var(--text-secundary);
 }
 
-.card-body .principal-info .card-title {
+.card-body .principal-info {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-secundary);
   padding: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secundary);
+  margin: 0.5rem 0;
   text-transform: uppercase;
 }
 
@@ -3176,4 +3184,15 @@ footer .container .footer-nav-links ul li {
 
 .property-item-img{
   height: 272px !important;
+}
+
+.textLimitClass{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.textLimitClass:hover{
+  display: block !important;
 }

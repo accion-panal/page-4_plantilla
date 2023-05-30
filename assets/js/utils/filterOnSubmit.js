@@ -175,7 +175,7 @@ document.getElementById("buscar")?.addEventListener("click", async () => {
             <div class="card-body">
               <div class="principal-info">
                 <small>${data.types}/ ${data.operation}</small>
-                <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
+                <a class="card-title textLimitClass" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
                   >${data.title}</a
                 >
                 <p>
