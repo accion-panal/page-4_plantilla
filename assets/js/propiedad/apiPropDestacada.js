@@ -38,7 +38,7 @@ export default async function apiDestCall() {
                 <div class="secundary-info">
                   <small>REF: ${data.id}</small>
                   <div>
-                    <span> <i class="fa-sharp fa-solid fa-bed"></i> ${data.bedroom != undefined && data.bedroom != "" && data.bedroom != null ? data.bedroom : "0"} </span>
+                    <span> <i class="fa-sharp fa-solid fa-bed"></i> ${data.bedrooms != undefined && data.bedrooms != "" && data.bedrooms != null ? data.bedrooms : "0"} </span>
                     <span> <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined  && data.bathrooms != "" && data.bathrooms != "null" && data.bathrooms != null ? data.bathrooms : "0"} </span>
                   </div>
                 </div>
