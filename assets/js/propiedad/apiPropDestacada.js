@@ -12,8 +12,8 @@ export default async function apiDestCall() {
     const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
       
           document.getElementById('container-prop-destacada').innerHTML = filtrado.map(data => 
-          `<li class="splide__slide">
-          <div class="col-property-item">
+          `<li class="splide__slide" style="padding:1rem;">
+          <div class="col-property-item" >
             <div class="property-item">
               <div class="bg-success property-item-img"  style="height:272px">
                 <a href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
@@ -57,6 +57,14 @@ export default async function apiDestCall() {
             autoplay: 'play',
             // autoWidth: true,
             drag:true,
+            breakpoints: {
+              1399: {
+                perPage: 2,
+              },
+              991: {
+                perPage: 1,
+              }
+            }
             
         });
         splide.mount();
