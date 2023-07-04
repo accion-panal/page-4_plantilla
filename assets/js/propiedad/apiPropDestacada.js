@@ -1,34 +1,40 @@
 import { getProperties } from "../services/PropertiesServices.js"
 import	ExchangeRateServices from  "../services/ExchangeRateServices.js";
-
 import {parseToCLPCurrency, clpToUf} from "../utils/getExchangeRate.js"
 
+import { PropertyData } from "../Data/userId.js";
+
 export default async function apiDestCall() {
-    let {data} = await getProperties(1,10,0,1,1);
+	const {CodigoUsuarioMaestro,companyId,realtorId} = PropertyData;
+
+    let {data} = await getProperties(1,10,CodigoUsuarioMaestro,1,companyId, realtorId);
     let filtrado = data.filter(data => data.highlighted != null && data.highlighted  != false );
 
     const response = await ExchangeRateServices.getExchangeRateUF();
     const ufValue = response?.UFs[0]?.Valor
     const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
       
-          document.getElementById('container-prop-destacada').innerHTML = filtrado.map(data => 
-          `<li class="splide__slide" style="padding:1rem;">
+
+    data = data.map(item => {
+      // Reemplazar "\\" por "//" en la propiedad "image"
+      item.image = item.image.replace(/\\/g, "//");
+      return item;
+    });
+    if(filtrado.length != 0){
+    document.getElementById('container-prop-destacada').innerHTML = filtrado.map(data => 
+        `<li class="splide__slide" style="padding:1rem;">
           <div class="col-property-item" >
             <div class="property-item">
               <div class="bg-success property-item-img"  style="height:272px">
-                <a href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
-                  ><img
-                    class="img-fluid imgPropsCard"
-                    src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "assets/img/Sin.png" }"
-                    alt=""
-                   
-                /></a>
+                <a href="/detalle_propiedad.html?$${data.id}&realtorId=${realtorId}&statusId=${1}&companyId=${companyId}">
+									${data.image.endsWith('.jpg') ? `<img src=${data.image} alt="Image" class="img-fluid imgPropsCard">`: data.image.endsWith('.png') ? `<img src=${data.image} alt="Image" class="img-fluid imgPropsCard">` : data.image.endsWith('.jpeg') ? `<img src=${data.image} alt="Image" class="img-fluid imgPropsCard">`: `<img src='https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg' alt="Image" class="img-fluid imgPropsCard">`}              
+                </a>
               </div>
   
               <div class="card-body">
                 <div class="principal-info">
                   <small>${data.operation}</small>
-                  <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
+                  <a class="card-title" href="/detalle_propiedad.html?${data.id}&realtorId=${realtorId}&statusId=${1}&companyId=${companyId}"
                     >${data.title}</a
                   >
                   <p>
@@ -39,7 +45,7 @@ export default async function apiDestCall() {
                   <small>REF: ${data.id}</small>
                   <div>
                     <span> <i class="fa-sharp fa-solid fa-bed"></i> ${data.bedrooms != undefined && data.bedrooms != "" && data.bedrooms != null ? data.bedrooms : "0"} </span>
-                    <span> <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined  && data.bathrooms != "" && data.bathrooms != "null" && data.bathrooms != null ? data.bathrooms : "0"} </span>
+                    <span> <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined  && data.bathrooms != "" && data.bathrooms != "" && data.bathrooms != null ? data.bathrooms : "0"} </span>
                   </div>
                 </div>
                 <div class="more-info">
@@ -52,7 +58,6 @@ export default async function apiDestCall() {
           ).join('');
 
           let splide = new Splide(".splide", {
-            type    : 'loop',
             perPage : 3,
             autoplay: 'play',
             // autoWidth: true,
@@ -68,6 +73,12 @@ export default async function apiDestCall() {
             
         });
         splide.mount();
+  }else{
+		document.getElementById('container-prop-destacada').innerHTML = `
+    	<li class="splide__slide" style="width:100% !important;">
+			  <p class="message-no-resgiter">No registra propiedades destacadas</p>
+		  </li>`;
+	}
 }
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -3210,3 +3210,28 @@ footer .container .footer-nav-links ul li {
 .textLimitClass:hover{
   display: block !important;
 }
+
+.message-no-resgiter{
+  font-size: 25px !important;
+  text-align: center;
+  transition: ease-in-out 200ms;
+}
+
+.message-no-resgiter:hover{
+  font-size: 28px !important;
+  transition: ease-in 400ms;
+
+}
+
+@media only screen and (max-width:487px)
+{
+  .message-no-resgiter{
+    font-size: 19px !important;
+  
+  }
+
+  .message-no-resgiter:hover{
+    font-size: 22px !important;
+  
+  }
+}
