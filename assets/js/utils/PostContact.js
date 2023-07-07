@@ -8,24 +8,25 @@ let CompanyId = PropertyData.companyId;
 
 
 form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-let firstName = document.getElementById('nombre');
-let email = document.getElementById('email');
-let subject = document.getElementById('sujeto');
-let phone = document.getElementById('phone');
-let message = document.getElementById('mensaje');
+  let firstName = document.getElementById('nombre');
+  let email = document.getElementById('email');
+  let subject = document.getElementById('sujeto');
+ let phone = document.getElementById('phone'); 
+  let message = document.getElementById('mensaje');
 
-if(firstName.value==='' || email.value==='' || subject.value==='' ||phone.value==='' || message.value===''){
-  /* console.log('campos vacios') */
-  setTimeout(function () {
-    respuesta.innerHTML = `<div class="alert alert-danger" role="alert" style="font-size:13px;">
-    Los campos no deben estar vacios.
-   <button type="button" class="btn-close text-end" data-bs-dismiss="alert" aria-label="Close"></button>
-   </div>`;
-  }, 5000);
-  return;
-}
+  let alertElement = document.querySelector('.alert');
+  if(firstName.value==='' || email.value==='' || subject.value==='' || message.value===''){
+    /* console.log('campos vacios') */
+    setTimeout(function () {
+      respuesta.innerHTML = `<div class="alert alert-danger" role="alert" style="font-size:13px;">
+      Los campos no deben estar vacios.
+    <button type="button" class="btn-close text-end" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>`;
+    }, 5000);
+    return;
+  }
 
 
 let myHeaders = new Headers();

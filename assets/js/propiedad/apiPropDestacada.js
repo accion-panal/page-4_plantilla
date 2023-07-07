@@ -5,21 +5,28 @@ import {parseToCLPCurrency, clpToUf} from "../utils/getExchangeRate.js"
 import { PropertyData } from "../Data/userId.js";
 
 export default async function apiDestCall() {
-	const {CodigoUsuarioMaestro,companyId,realtorId} = PropertyData;
-
+    const {CodigoUsuarioMaestro,companyId,realtorId} = PropertyData;
     let {data} = await getProperties(1,10,CodigoUsuarioMaestro,1,companyId, realtorId);
-    let filtrado = data.filter(data => data.highlighted != null && data.highlighted  != false );
+    let filtrado = data.filter(data => data.highlighted != null && data.highlighted  != false && data.highlighted != 0 );
 
-    const response = await ExchangeRateServices.getExchangeRateUF();
-    const ufValue = response?.UFs[0]?.Valor
-    const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
-      
-
-    data = data.map(item => {
-      // Reemplazar "\\" por "//" en la propiedad "image"
+    filtrado = filtrado.map(item => {
+      // Reemplazar "\" por "//" en la propiedad "image"
       item.image = item.image.replace(/\\/g, "//");
       return item;
     });
+
+   /*  data = data.map(item => {
+      // Reemplazar "\\" por "//" en la propiedad "image"
+      item.image = item.image.replace(/\\/g, "//");
+      return item;
+    }); */
+
+    const response2 = await ExchangeRateServices.getExchangeRateUF();
+    const ufValue = response2?.UFs[0]?.Valor
+    const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
+      
+
+    
     if(filtrado.length != 0){
     document.getElementById('container-prop-destacada').innerHTML = filtrado.map(data => 
         `<li class="splide__slide" style="padding:1rem;">
@@ -58,10 +65,10 @@ export default async function apiDestCall() {
           ).join('');
 
           let splide = new Splide(".splide", {
-            perPage : 3,
-            autoplay: 'play',
-            // autoWidth: true,
-            drag:true,
+            type: "loop",
+            drag :"free",
+            autoplay: "play",
+            perPage: 3,
             breakpoints: {
               1399: {
                 perPage: 2,
@@ -70,7 +77,6 @@ export default async function apiDestCall() {
                 perPage: 1,
               }
             }
-            
         });
         splide.mount();
   }else{
@@ -88,4 +94,4 @@ document.addEventListener("DOMContentLoaded", function () {
 	splide.mount();
 });
 
-apiDestCall()
+/* apiDestCall() */

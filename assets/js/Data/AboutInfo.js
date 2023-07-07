@@ -25,8 +25,19 @@ if (vision != null ){
     <p>
       ${AboutInformation.vision}
     </p>`
-}   
+};
+
+/* IMAGEN DE VISION Y MISION*/
+let fotonosotros = document.getElementById('fotoabout');
+if (fotonosotros !==null){
+  fotonosotros.innerHTML = `
+  <img src='${AboutInformation.fotonosotros}' style='width: 100%; height: 90%; float: left;'/>
+  `;
+}
+
 
 }
 
 loadInformation();
+
+
