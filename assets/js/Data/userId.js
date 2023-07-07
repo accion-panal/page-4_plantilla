@@ -1,20 +1,20 @@
 export const PropertyData = {CodigoUsuarioMaestro: 0, companyId: 1, realtorId:0};
 
-export const limitDataApi = { limit:6 };
+export const limitDataApi = { limit:3 };
 
 
 export const RealtorSendEmailData = {
-    sendEmail: 'fabians@bidata.cl',  /* SendEmail.js */
-    detail: 'fabians@bidata.cl',     /* SendEmailDetail.js */
-    public: 'fabians@bidata.cl',     /* SendEmailPublic.js */
+    sendEmail: 'nicolascabreramillacan@gmail.com',  /* SendEmail.js */
+    detail: 'nicolascabreramillacan@gmail.com',     /* SendEmailDetail.js */
+    public: 'nicolascabreramillacan@gmail.com',     /* SendEmailPublic.js */
 };
-
 
 export const AboutInformation = {
     nosotros:'Somos una empresa familiar creada en el año 1995 expertosen el sector inmobiliario, nuestro enfoque es prestar la mejor experiencia en el servicio personalizado, tenemos contacto directo y cercano con nuestros clientes para brindar respuestas y asesorías oportunas. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing, Lorem ipsum dolor sit amet do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing, Lorem ipsum dolor sit amet',
 
     mision:  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt doloribus placeat voluptatem, sit ad blanditiis voluptates architecto commodi, modi asperiores quam dicta. Ad ipsa adipisciprovident fugit neque quibusdam. Non?',
-    vision:  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt doloribus placeat voluptatem, sit ad blanditiis voluptates architecto commodi, modi asperiores quam dicta. Ad ipsa adipisci provident fugit neque quibusdam. Non?',
+    vision:  'lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt doloribus placeat voluptatem, sit ad blanditiis voluptates architecto commodi, modi asperiores quam dicta. Ad ipsa adipisci provident fugit neque quibusdam. Non?',
+    fotonosotros: 'https://lh4.ggpht.com/wKrDLLmmxjfRG2-E-k5L5BUuHWpCOe4lWRF7oVs1Gzdn5e5yvr8fj-ORTlBF43U47yI=w300',
 }
 
 export const ContactInformation = {

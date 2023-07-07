@@ -62,7 +62,7 @@ const filterSelects = async () => {
                 return `<option value="${data.value}">${data.name}</option>`;
             } else {
                 return `
-                    <option value="0" selected >Tipo Propiedad</option>
+                    <option value="" selected >Tipo Propiedad</option>
                     <option value="${data.value}">${data.name}</option>
                 `;
             }
@@ -76,7 +76,7 @@ const filterSelects = async () => {
                 return `<option value="${data.value}">${data.name}</option>`;
             } else {
                 return `
-                    <option value="0" selected >Operacion</option>
+                    <option value="" selected >Operacion</option>
                     <option value="${data.value}">${data.name}</option>
                 `;
             }
@@ -89,7 +89,7 @@ const filterSelects = async () => {
     if (commune !== null) {
         region.addEventListener("change", async (data) => {
             let aux = await getCommune(data.target.value);
-            document.getElementById("commune").innerHTML = aux.data.map((data) => 
+            document.getElementById("commune").innerHTML = aux.data.map((data,i) => 
             `<option value="${data.id}">${data.name}</option>`
             );
         });
@@ -113,12 +113,56 @@ const filterSelects = async () => {
             let regionValue = data.target.value;
             let idRegion = parseInt(regionValue.match(/\d+/)[0]);
             let aux = await getCommune(idRegion);
-            document.getElementById("communeTextId").innerHTML = aux.data.map((data) => 
-            `<option value="${data.name}">${data.name}</option>`
-            );
+            document.getElementById("communeTextId").innerHTML = aux.data.map((data,i) => { 
+            if (i != 0) {
+                return `<option value="${data.name}">${data.name}</option>`;
+            }else{
+                return `
+                    <option value="" selected >Comuna</option>
+                    <option value="${data.name}">${data.name}</option>
+                `;
+            }
+            
+            });
         });
     }
     
+    //Llenar Selects segun el globalQuery
+    let globalQuery;
+    let storedGlobalQuery = localStorage.getItem('globalQuery');
+    if (storedGlobalQuery) {
+        globalQuery = JSON.parse(storedGlobalQuery);
+        if(globalQuery.typeOfProperty != null){
+            document.getElementById("typeOfProperty").value = globalQuery.typeOfProperty;
+        }
+
+        if(globalQuery.region != null && globalQuery.region != '0'){
+            const regionData = data.regions.find(region => region.id == globalQuery.region);
+            let regionQuery = `${regionData.id} ${regionData.name}`;
+            document.getElementById("regionTextId").value = regionQuery;
+
+            //* Actualizar select commune
+            let aux = await getCommune(globalQuery.region);
+            document.getElementById("communeTextId").innerHTML = aux.data.map((data,i) => { 
+            if (i != 0) {
+                return `<option value="${data.name}">${data.name}</option>`;
+            }else{
+                return `
+                    <option value="" selected >Comuna</option>
+                    <option value="${data.name}">${data.name}</option>
+                `;
+            }
+            });
+
+            //* Actualizar value de select commune
+            if(globalQuery.commune != null && globalQuery.commune != ''){
+                let aux = await getCommune(globalQuery.region);
+                const communeData = aux.data.find(commune => commune.id == globalQuery.commune);
+                let communeQuery = `${communeData.name}`;
+                document.getElementById("communeTextId").value = communeQuery;
+            };
+        }
+    }
 
 }
 filterSelects();

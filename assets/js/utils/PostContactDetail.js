@@ -1,31 +1,27 @@
-
 import { PropertyData } from "../Data/userId.js";
 
-const formRealtor = document.getElementById('form-realtor')
-
-
-
-let firstName = document.getElementById('nombre');
-let email = document.getElementById('email');
-// let phone = document.getElementById('phone');
-let subject = document.getElementById('sujeto');
-let message = document.getElementById('mensaje');
-
-let respuesta = document.getElementById('respuesta');
-formRealtor.addEventListener('submit', function(e) {
-    e.preventDefault();
+const form = document.getElementById('form-realtor')
 
 let CompanyId = PropertyData.companyId;
 
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  let alertElement = document.querySelector('.alert');
+
+
+  let firstName = document.getElementById('nombre');
+  let email = document.getElementById('email');
+  // let phone = document.getElementById('phone');
+  let subject = document.getElementById('sujeto');
+  let message = document.getElementById('mensaje');
+
 if(firstName.value==='' || email.value==='' || subject.value==='' ||message.value===''){
   /* console.log('campos vacios') */
-  setTimeout(function () {
-    respuesta.innerHTML = `<div class="alert alert-danger" role="alert" style="font-size:13px;">
-    Los campos no deben estar vacios.
-   <button type="button" class="btn-close text-end" data-bs-dismiss="alert" aria-label="Close"></button>
-   </div>`;
-  }, 5000);
-  return;
+    /* console.log('campos vacios') */
+    alertElement.textContent = 'Todos los campos son obligatorios';
+    alertElement.classList.add('alert-danger');
+    alertElement.classList.remove('visually-hidden');
+    return;
 }
 
 let myHeaders = new Headers();
@@ -36,6 +32,7 @@ let raw = JSON.stringify({
   "name": firstName.value,
   "lastName":"",
   "email": email.value,
+  "phone": "",
   "subject": subject.value,
   "message": message.value,
   "termsAndConditions": true,
@@ -50,24 +47,36 @@ let requestOptions = {
 //   redirect: 'follow'
 };
  
-fetch("https://aulen.partnersadvisers.info/contact", requestOptions)
-  .then(response => response.text())
-  .then(result => {
+fetch("https://aulen.partnersadvisers.info/contact/", requestOptions)
+.then(response => response.text())
+.then((result) => {
     //Vaciar Inputs
     firstName.value = '';
     email.value = '';
     subject.value = '';
     message.value = '';
     //Mensaje de Alerta : Success
-  setTimeout(function () {
+    alertElement.textContent = 'El mensaje fue enviado con éxito.';
+    alertElement.classList.add('alert-success');
+    alertElement.classList.remove('visually-hidden');
+    setTimeout(function () {
         // Ocultar alerta despues de 5seg
-        respuesta.innerHTML = `<div class="alert alert-success" role="alert">
-        Formulario enviado exitosamente, Muchas gracias ${firstName.value}!!
-       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-       </div`;
+        alertElement.classList.add('visually-hidden');
+        alertElement.classList.remove('alert-success');
     }, 5000);
 })
-  .catch(error =>console.log('Error al enviar mensaje',error)) ;
+.catch((error) => {
+    //Mensaje de Alerta : Error
+    /* alertElement.textContent = 'Ocurrio un error al enviar correo.'; */
+    console.log('Error: ', error);
+    alertElement.classList.add('alert-danger');
+    alertElement.classList.remove('visually-hidden');
+    setTimeout(function () {
+        // Ocultar alerta despues de 5seg
+        alertElement.classList.add('visually-hidden');
+        alertElement.classList.remove('alert-danger');
+    }, 5000);
+  })
 })
 
 
