@@ -356,6 +356,14 @@
 							<option value="MayorMenor">Precio de mayor a menor</option>
             </select>
           </div>
+          <div class="d-flex flex-row align-items-center">
+            <p class="text-nowrap pt-3 px-2">Cant. Propiedades:</p>
+            <select id="FilterLimit" class="form-select border">
+							<option value="3">3</option>
+							<option value="6" selected>6</option>
+							<option value="9">9</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -364,8 +372,8 @@
         <div class="container py-1 wow fadeInUp" data-wow-delay="0.1s">
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"> 
-              <div class="row d-flex" id="container-propiedad">
-                
+              <div class="row d-flex" id="container-propiedad" style="justify-content: center;">
+                <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
                 <!-- <div class="col-property-item col-lg-4 col-md-6 col-sm-6" >
                   <div class="property-item">
                     <div class="bg-success property-item-img">
@@ -407,8 +415,8 @@
               </div>       
             </div>
             <div class="tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-              <div class="row" id="container-propiedad-list">  
-                
+              <div class="row" id="container-propiedad-list" style="justify-content: center;">  
+                <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
                   <!-- <div class="property-item flex-row align-items-center">
                     <div class="bg-success property-item-img">
                       <a href="property-details.html"
@@ -445,8 +453,7 @@
                       </div>
                     </div>
                   </div> -->
-                                              
-              </div>              
+              </div>
             </div>
             <div id="pagination-col"></div>
           </div>
