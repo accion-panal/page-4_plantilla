@@ -179,8 +179,6 @@
                 <option value="" selected>Tipo de Propiedad</option>
                 <option value="casa">Casa</option>
 								<option value="bodega">Bodega</option>
-								<option value="departamento">Departamento</option>
-								<option value="estacionamientos">Estacionamiento</option>
               </select>
             </div>
 
@@ -194,15 +192,14 @@
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2"id="region">
+              <select class="form-select py-2"id="regionTextId">
                 <option value="0" selected>Región</option>
               </select>
             </div>
 
             <div class="col-md-4">
-              <select class="form-select py-2" id="commune">
+              <select class="form-select py-2" id="communeTextId">
                 <option value="" selected>Comuna</option>
-               
               </select>
             </div>
 
@@ -240,7 +237,7 @@
                   type="radio"
                   name="inlineRadioOptions"
                   id="inlineRadio1"
-                  value="option1"
+                  value="uf"
                 />
                 <label class="form-check-label" for="inlineRadio1">UF</label>
               </div>
@@ -250,7 +247,7 @@
                   type="radio"
                   name="inlineRadioOptions"
                   id="inlineRadio2"
-                  value="option2"
+                  value="clp"
                 />
                 <label class="form-check-label" for="inlineRadio2">CLP</label>
               </div>
@@ -611,15 +608,17 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/owlCarousel.js"></script>
 
-
+    <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script type="module" src="assets/js/prop_destacada.js"></script>
 
-    <!-- <script type="module" src="assets/js/utils/filterOnSubmit.js"></script>
-		<script type="module" src="assets/js/utils/filterOnSubmitIndex.js"></script> -->
+    <!-- Prop destacada -->
+		<script type="module" src="assets/js/pages/prop_destacada.js"></script>
 
+    <!-- Filtros hacia propiedades -->
 		<script type="module" src="assets/js/utils/getSelects.js"></script>
-		<script type="module" src="assets/js/Data/ContactInfo.js"></script>
-		<script type="module" src="assets/js/utils/pruebasfiltro.js"></script>
+		<script type="module" src="assets/js/utils/filterIndex.js"></script>
+
+    <!-- Data -->
+    <script type="module" src="assets/js/Data/ContactInfo.js"></script>
   </body>
 </html>

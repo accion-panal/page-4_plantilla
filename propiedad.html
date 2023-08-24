@@ -338,7 +338,7 @@
               <button class="btn btn-light border-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <i class="bi bi-list-ul"></i></button>
             </li>
             <li class="nav-item" role="presentation">
-              <a href="propiedad-map.html"><button class="btn btn-light border-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" ><i class="bi bi-pin-map"></i></button></a>
+              <button class="btn btn-light border-0" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" ><i class="bi bi-pin-map"></i></button>
             </li>
           </ul>
           </div>
@@ -453,6 +453,11 @@
                       </div>
                     </div>
                   </div> -->
+              </div>
+            </div>
+            <div class="tab-pane fade initialMap active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <div id="div-map-section">
+                <div id="map"></div>
               </div>
             </div>
             <div id="pagination-col"></div>
@@ -629,13 +634,24 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
+    <!-- Custom -->
+    <script src="assets/js/tabs.js"></script>
 
+    <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script type="module" src="assets/js/index.js"></script>
-		<script type="module" src="assets/js/utils/getExchangeRate.js"></script>
-		<script type="module" src="assets/js/utils/getSelects.js"></script>
+
+    <!-- Pages -->
+    <script type="module" src="assets/js/pages/index.js"></script>
+
+    <!-- Utils -->
     <script type="module" src="assets/js/utils/filterOnSearch.js"></script>
-		<script type="module" src="assets/js/Data/ContactInfo.js"></script>
-    <script type="module" src="assets/js/utils/pagination.js"></script>    
+    <script type="module" src="assets/js/utils/getSelects.js"></script>
+    <script type="module" src="assets/js/utils/limitProp.js"></script>
+
+    <!-- Data -->
+    <script type="module" src="assets/js/Data/ContactInfo.js"></script> 	
+		
+    
+		
   </body>
 </html>

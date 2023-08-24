@@ -45,18 +45,6 @@ updatedImages.forEach((image, index) => {
   `;
 });
 
-console.log(indicator)
-console.log(img)
-
-/* data.images.forEach((images, index) => {img +=
-    ` <div class="carousel-item ${ index == 0 ? "active" : ""} ">
-        <img src="${images != undefined && images != null && images != "" ? images : "assets/img/Sin.png"}" style="height:900px; width: 100% !important" />
-     </div> 	
-    `
-    indicator += `
-    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="${index}" ${index == 0 ? "class = active": ""} aria-current="true" aria-label="${index + 1}"></button>
-    `
-    }) */
 
 
 document.getElementById('carrucel-img-prop').innerHTML = `
