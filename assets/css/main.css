@@ -3239,3 +3239,9 @@ footer .container .footer-nav-links ul li {
   
   }
 }
+
+
+.initialMap {
+  height: 0 !important;
+  overflow: hidden;
+}

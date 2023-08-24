@@ -15,12 +15,6 @@ export default async function apiDestCall() {
       return item;
     });
 
-   /*  data = data.map(item => {
-      // Reemplazar "\\" por "//" en la propiedad "image"
-      item.image = item.image.replace(/\\/g, "//");
-      return item;
-    }); */
-
     const response2 = await ExchangeRateServices.getExchangeRateUF();
     const ufValue = response2?.UFs[0]?.Valor
     const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));

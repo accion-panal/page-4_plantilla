@@ -1,8 +1,6 @@
 import { ContactInformation } from "../Data/userId.js";
 
 const loadInformation = () => {
-    localStorage.removeItem('globalQuery');
-    const {horarios}= ContactInformation;
     /* LLENAR INFORMACION DE MISION */
     /* REGION: rescatar value por su id */
     let footerAddress = document.getElementById('footer-address-ContactInfo');
