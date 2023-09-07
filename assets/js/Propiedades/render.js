@@ -197,7 +197,7 @@ export default async function renderCall(QueryParams = undefined, NumberPaginati
             <div class="col-lg-4 col-md-6 col-sm-6" style="overflow: hidden;">
                   <div class="property-item">
                     <div class="bg-success property-item-img" style="overflow:hidden">
-                      <a href="/detalle_propiedad.html?${data.id}realtorId=${realtorId}&statusId=${1}&companyId=${companyId}">
+                      <a href="/detalle_propiedad.html?${data.id}realtorId=${realtorId}&statusId=${1}&companyId=${companyId}" target="_blank">
                         ${data.image.endsWith('.jpg') ? `<img src=${data.image} alt="Image" class="img-fluid img-prop">`: data.image.endsWith('.png') ? `<img src=${data.image} alt="Image" class="img-fluid img-prop">` : data.image.endsWith('.jpeg') ? `<img src=${data.image} alt="Image" class="img-fluid img-prop">`: `<img src='https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg' alt="Image" class="img-fluid img-prop">`}
                         </a>
                     </div>
@@ -206,7 +206,7 @@ export default async function renderCall(QueryParams = undefined, NumberPaginati
                       <div class="principal-info">
                         <small>${data.types}/ ${data.operation}</small>
                         <a class="card-title textLimitClass" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
-                          >${data.title}</a
+                        target="_blank">${data.title}</a
                         >
                         <p>
                           <i class="bi bi-pin-map"></i> ${data.city != undefined && data.city != "" && data.city != null ? data.city : "No registra ciudad" }, ${data.commune != undefined && data.commune != "" && data.commune != null ? data.commune : "No registra comuna"}, Chile
@@ -238,7 +238,7 @@ export default async function renderCall(QueryParams = undefined, NumberPaginati
                   `	<div class="col-property-item col-lg-12 col-sm-12"  style="overflow: hidden;" >
                   <div class="property-item flex-row align-items-center">
                   <div class="bg-success property-item-img" style="max-width: 40%; max-height: 30%; height:auto !important">
-                      <a href="/detalle_propiedad.html?${data.id}realtorId=${realtorId}&statusId=${1}&companyId=${companyId}">
+                      <a href="/detalle_propiedad.html?${data.id}realtorId=${realtorId}&statusId=${1}&companyId=${companyId}" target="_blank">
                         ${data.image.endsWith('.jpg') ? `<img src=${data.image} alt="Image" class="img-fluid img-prop-map">`: data.image.endsWith('.png') ? `<img src=${data.image} alt="Image" class="img-fluid img-prop-map">` : data.image.endsWith('.jpeg') ? `<img src=${data.image} alt="Image" class="img-fluid img-prop-map">`: `<img src='https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg' alt="Image" class="img-fluid  img-prop-map">`}
                         </a>
                     </div>
@@ -246,7 +246,7 @@ export default async function renderCall(QueryParams = undefined, NumberPaginati
                     <div class="card-body">
                       <div class="principal-info">
                         <small>${data.types} / ${data.operation}</small>
-                        <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
+                        <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}" target="_blank"
                           >${data.title}</a
                         >
                         <p>
