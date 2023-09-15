@@ -27,7 +27,7 @@ export default async function apiDestCall() {
           <div class="col-property-item" >
             <div class="property-item">
               <div class="bg-success property-item-img"  style="height:272px">
-                <a href="/detalle_propiedad.html?$${data.id}&realtorId=${realtorId}&statusId=${1}&companyId=${companyId}">
+                <a href="/detalle_propiedad.html?$${data.id}&realtorId=${realtorId}&statusId=${1}&companyId=${companyId}" target="_blank">
 									${data.image.endsWith('.jpg') ? `<img src=${data.image} alt="Image" class="img-fluid imgPropsCard">`: data.image.endsWith('.png') ? `<img src=${data.image} alt="Image" class="img-fluid imgPropsCard">` : data.image.endsWith('.jpeg') ? `<img src=${data.image} alt="Image" class="img-fluid imgPropsCard">`: `<img src='https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg' alt="Image" class="img-fluid imgPropsCard">`}              
                 </a>
               </div>
@@ -35,7 +35,7 @@ export default async function apiDestCall() {
               <div class="card-body">
                 <div class="principal-info">
                   <small>${data.operation}</small>
-                  <a class="card-title" href="/detalle_propiedad.html?${data.id}&realtorId=${realtorId}&statusId=${1}&companyId=${companyId}"
+                  <a class="card-title" href="/detalle_propiedad.html?${data.id}&realtorId=${realtorId}&statusId=${1}&companyId=${companyId}" target="_blank"
                     >${data.title}</a
                   >
                   <p>
