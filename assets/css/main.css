@@ -3245,3 +3245,12 @@ footer .container .footer-nav-links ul li {
   height: 0 !important;
   overflow: hidden;
 }
+
+.dropdown-item.active, .dropdown-item:active{
+  background-color: #1d1d1d !important;
+  color: #fff !important;
+}
+.dropdown-item.hover, .dropdown-item:hover{
+  background-color: #1d1d1d4d !important;
+  color: #fff !important;
+}

@@ -111,8 +111,8 @@
               <li class="nav-item dropdown"> 
                 <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Propiedades</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item active" href="propiedad.html" >Propiedades</a></li>
-                  <li><a class="dropdown-item" href="vendida.html">Propiedades vendidas</a></li>
+                  <li><a class="dropdown-item " href="propiedad.html" >Propiedades</a></li>
+                  <li><a class="dropdown-item active" href="vendida.html">Propiedades vendidas</a></li>
                   <li><a class="dropdown-item" href="arrendada.html">Propiedades arrendadas</a></li>
                 </ul>
               </li>
@@ -206,16 +206,6 @@
 								<option value="Terreno En Construccion">Terreno En Construccion</option>
               </select>
             </div>
-
-            <div class="col-md-4">
-              <select class="form-select py-2" id="operationType">
-                <option value="" selected>Tipo de Operación</option>
-                <option value="venta" >Venta</option>
-                <option value="arriendo" >Arriendo</option>
-                <option value="arriendo_temporal" >Arriendo Temporal</option>
-              </select>
-            </div>
-
             <div class="col-md-4">
               <select class="form-select py-2" id="regionTextId">
                 <option value="0" selected>Región</option>
@@ -228,18 +218,6 @@
                 
               </select>
             </div>
-
-            <div class="col-md-4">
-              <select class="form-select py-2" id="bedrooms">
-                <option value="" selected>Habitaciones</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-
-              </select>
-            </div>
-
             <div class="col-md-4">
               <select class="form-select py-2" id="bathrooms">
                 <option value="" selected>Baños</option>
@@ -280,26 +258,16 @@
               </div>
             </div>
 
-            <div class="col-md-2">
-              <div>
-                <input
-                  type="number"
-                  class="form-control py-2"
-                  placeholder="Desde"
-                  id="min_price"
-                />
+            <div class="col-md-4">
+                <select class="form-select py-2" id="bedrooms">
+                  <option value="" selected>Habitaciones</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+  
+                </select>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div>
-                <input
-                  type="number"
-                  class="form-control py-2"
-                  placeholder="Hasta"
-                  id="max_price"
-                />
-              </div>
-            </div>
 
             <div class="col-md-4">
               <select class="form-select py-2" id="covered_parking_lots">
@@ -311,6 +279,27 @@
 
               </select>
             </div>
+            
+            <div class="col-md-2">
+                <div>
+                  <input
+                    type="number"
+                    class="form-control py-2"
+                    placeholder="Desde"
+                    id="min_price"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div>
+                  <input
+                    type="number"
+                    class="form-control py-2"
+                    placeholder="Hasta"
+                    id="max_price"
+                  />
+                </div>
+              </div>
 
             <div class="col-md-12 d-flex justify-content-center mt-4">
               <button type="button" id="buscar2" class="btn btn-rounded btn-circle">
@@ -327,7 +316,7 @@
   <div class="outstanding-properties">
     <div class="container wow fadeInUp" data-wow-delay="0.1s">
       <div class="section-header section-header__uppercase">
-        <h2>Propiedades</h2>
+        <h2>Propiedades vendidas</h2>
       </div>
       <div class="section-display-conf">
         <div id="total-prop">
